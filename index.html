@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In Loving Memory</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 40px;
+            background-color: #fafafa;
+        }
+        img {
+            max-width: 300px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+        h2 {
+            margin-bottom: 10px;
+        }
+        p.caption {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        audio {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>In Loving Memory ❤️</h2>
+    <img src="photo.jpg" alt="Remembered Person">
+    <p class="caption">John Doe (1950 – 2023)</p>
+
+    <audio id="voice" autoplay>
+        <source src="sound.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        // Try to play audio (browsers may block autoplay with sound)
+        const audio = document.getElementById("voice");
+        audio.play().catch(() => {
+            console.log("Autoplay blocked by browser. User must click play.");
+        });
+    </script>
+</body>
+</html>
