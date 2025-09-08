@@ -2,40 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
     <title>In Loving Memory</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 40px;
-            background-color: #fafafa;
-        }
-        img {
-            max-width: 300px;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            margin-bottom: 20px;
-        }
-        h2 {
-            margin-bottom: 10px;
-        }
-        p.caption {
-            font-size: 1.1em;
-            color: #555;
-            margin-bottom: 30px;
-        }
-        audio {
-            margin-top: 20px;
-        }
-    </style>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+   <style>
+    body {
+      background-color: #fafafa;
+    }
+    .memorial-photo {
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+    }
+    .caption {
+      font-size: 1.2em;
+      color: #555;
+    }
+    audio {
+      margin-top: 15px;
+    }
+  </style>
 </head>
-<body>
-        <h2>❤️به یاد پدر، همسر و برادر عزیزمان</h2>
-    <img src="photo.jpg" alt="Remembered Person">
-        <br/>
-        <audio id="voice" controls autoplay>
-            <source src="sound.wav" type="audio/wav">
-            Your browser does not support the audio element.
+<body class="d-flex flex-column justify-content-center align-items-center min-vh-100 text-center">
+
+  <div class="container">
+    <h2 class="mb-3">❤️</h2>
+
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <img src="photo.jpg" alt="Remembered Person" class="memorial-photo img-fluid">
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <audio id="voice" autoplay controls class="w-100">
+          <source src="sound.wav" type="audio/wav">
+          Your browser does not support the audio element.
         </audio>
-</body>
-</html>
+      </div>
+    </div>
+  </div>
