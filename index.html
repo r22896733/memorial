@@ -48,18 +48,18 @@
   </div>
 <script>
 const visitorData = {
-  screen: window.screen.width + "x" + window.screen.height,
-  language: navigator.language,
-  platform: navigator.platform,
-  referrer: document.referrer,
-  url: location.href
+  userAgent: navigator.userAgent
 };
 
+    
 fetch("https://20.0.69.138/log", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify(visitorData)
-});
+})
+.then(res => res.json())
+.then(data => console.log("Logged:", data))
+.catch(err => console.error("Log failed:", err));
 
     
 </script>
